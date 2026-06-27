@@ -29,35 +29,39 @@ class EcommerceSeeder extends Seeder
 
     public function run(): void
     {
-        User::factory()->create([
+        User::create([
             'name' => 'Admin User',
             'email' => 'admin@urbancobblers.com',
             'password' => Hash::make('password'),
             'is_admin' => true,
+            'email_verified_at' => now(),
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'John Customer',
             'email' => 'customer@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1 555-0100',
             'address' => '123 Main Street, New York, NY 10001',
+            'email_verified_at' => now(),
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'Sarah Mitchell',
             'email' => 'sarah@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1 555-0200',
             'address' => '456 Oak Avenue, Brooklyn, NY 11201',
+            'email_verified_at' => now(),
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'James Rivera',
             'email' => 'james@example.com',
             'password' => Hash::make('password'),
             'phone' => '+1 555-0300',
             'address' => '789 Pine Road, Austin, TX 78701',
+            'email_verified_at' => now(),
         ]);
 
         $categories = [
